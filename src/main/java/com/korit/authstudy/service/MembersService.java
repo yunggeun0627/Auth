@@ -11,12 +11,12 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class MembersService {
 
-//    private final MembersRepository membersRepository;
-//
-//    public void register(MemberRegisterDto dto) {
-//        System.out.println(dto);
-//        Member member = dto.toEntity();
-//        System.out.println(membersRepository.save(member));
-//
-//    }
+    private final MembersRepository membersRepository;
+
+    public void register(MemberRegisterDto dto) {
+        System.out.println(dto);
+        Member member = dto.toEntity();
+        System.out.println(membersRepository.save(member));
+
+    }
 }

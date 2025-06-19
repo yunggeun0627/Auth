@@ -25,12 +25,12 @@ public class MemberRegisterDto extends Object {
 //        return member;
 //    }
 
-//    public Member toEntity() {
-//        return Member.builder()
-//                .memberName(username)
-//                .password(PasswordEncoder.encode(password))
-//                .name(fullName)
-//                .email(email)
-//                .build();
-//    }
+    public Member toEntity() {
+        return Member.builder()
+                .memberName(username)
+                .password(password)
+                .name(fullName)
+                .email(email)
+                .build();
+    }
 }

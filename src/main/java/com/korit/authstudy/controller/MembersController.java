@@ -13,17 +13,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class MembersController {
 
-//    private MembersService memberService;
-//
-//    @PostMapping("/api/members")
-//    public ResponseEntity<?> register(@RequestBody MemberRegisterDto dto) {
-//        System.out.println(dto);
-//        memberService.register(dto);
-//        return ResponseEntity.ok(null);
-//    }
-//
-//    @GetMapping("/api/members")
-//    public ResponseEntity<?> getUser() {
-//        return ResponseEntity.ok(null);
-//    }
+    private final MembersService memberService;
+
+    @PostMapping("/api/members")
+    public ResponseEntity<?> register(@RequestBody MemberRegisterDto dto) {
+        memberService.register(dto);
+        return ResponseEntity.ok(null);
+    }
+
+    @GetMapping("/api/members")
+    public ResponseEntity<?> getUser() {
+        return ResponseEntity.ok(null);
+    }
 }
