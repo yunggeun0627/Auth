@@ -44,7 +44,7 @@ public class JwtUtil {
         return token;
     }
 
-    public Claims getClaims(String token) {
+    public Claims getClaims(String token) throws JwtException {
         JwtParserBuilder jwtParserBuilder = Jwts.parser();
         jwtParserBuilder.setSigningKey(KEY);
         JwtParser jwtParser = jwtParserBuilder.build();
